@@ -1,121 +1,63 @@
-/* General layout */
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff5f5;
-    font-family: 'Indie Flower', cursive;
-    overflow: hidden;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Main container */
-.container {
-    width: 90%;
-    max-width: 600px;
-    padding: 40px;
-    text-align: center;
-    background-color: #ffebee;
-    border: 3px solid #ff6b81;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+.player {
+  background-color: #1db954;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
 }
 
-/* Header text */
-.header_text {
-    font-size: 50px;
-    font-weight: bold;
-    color: #ff6b81;
-    margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2);
+.song-info {
+  margin-bottom: 15px;
 }
 
-/* GIF container */
-.gif_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+.controls {
+  margin: 20px 0;
 }
 
-.gif_container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.controls button {
+  background: #fff;
+  color: #1db954;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-/* Button container */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.controls button:hover {
+  background: #eee;
 }
 
-/* Button styling */
-.btn {
-    padding: 12px 24px;
-    font-size: 20px;
-    border: 2px solid #ff6b81;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #ff6b81;
-    color: white;
-    font-family: 'Indie Flower', cursive;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
 }
 
-.btn:hover {
-    background-color: white;
-    color: #ff6b81;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+#playlist li {
+  padding: 10px;
+  cursor: pointer;
+  background: #fff;
+  color: #1db954;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: 0.3s;
 }
 
-/* "No" button override */
-#noButton {
-    background-color: #ff4757;
-    border-color: #ff4757;
-}
-
-#noButton:hover {
-    background-color: white;
-    color: #ff4757;
-}
-
-/* Wiggle animation */
-@keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
-    75% { transform: rotate(-5deg); }
-}
-
-.wiggle {
-    animation: wiggle 0.5s ease-in-out;
-}
-
-/* Heart animation */
-@keyframes heartFade {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.5);
-    }
-}
-
-.heart {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #ff6b81;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: heartFade 1s ease-out forwards;
+#playlist li:hover {
+  background: #ccc;
 }
