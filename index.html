@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mini Spotify</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="player">
-    <h1>🎧 Mini Spotify</h1>
+  <div class="container">
+    <h1>Spotify Clone 🎵</h1>
     <div class="song-info">
-      <h2 id="song-title">Chọn một bài hát</h2>
-      <p id="song-artist"></p>
+      <h2 id="song-title">Bài hát 1</h2>
+      <p id="song-artist">Nghệ sĩ A</p>
     </div>
-    <audio id="audio" controls></audio>
+    <audio id="audio" src="songs/song1.mp3"></audio>
+
     <div class="controls">
-      <button id="prev">⏮️</button>
-      <button id="play">▶️</button>
-      <button id="next">⏭️</button>
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="togglePlay()" id="play-btn">▶️</button>
+      <button onclick="nextSong()">⏭</button>
     </div>
-    <ul id="playlist"></ul>
   </div>
 
   <script src="script.js"></script>
